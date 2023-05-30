@@ -1,1 +1,17 @@
+RestTemplate restTemplate = new RestTemplate();
 
+String apiUrl = "https://api.example.com/data";
+
+ResponseEntity<String> response = restTemplate.getForEntity(apiUrl, String.class);
+
+if (response.getStatusCode() == HttpStatus.OK) {
+
+    String responseBody = response.getBody();
+
+    // Process the response body
+
+} else {
+
+    // Handle error response
+
+}
